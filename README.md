@@ -3,6 +3,9 @@
 ## Installing
 The last stable analysis base used is **2.1.30**. To install,
 ```bash
+export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+alias setupATLAS='source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh'
+source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
 mkdir myRootCore && cd myRootCore
 rcSetup Base,2.1.30
 git clone https://github.com/UCATLAS/simple_xAH_example
