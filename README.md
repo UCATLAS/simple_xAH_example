@@ -1,4 +1,4 @@
-# xAODHelpers - A RootCore Package
+# A Simple xAH Example
 
 ## Installing
 The last stable analysis base used is **2.1.30**. To install,
