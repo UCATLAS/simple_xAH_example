@@ -82,7 +82,7 @@ EL::StatusCode JetPlotsAlgo :: initialize ()
   // you create here won't be available in the output if you have no
   // input events.
 
-  Info("initialize()", m_name.c_str());
+  Info("initialize()", "JetPlotsAlgo");
   m_event = wk()->xaodEvent();
   m_store = wk()->xaodStore();
 
