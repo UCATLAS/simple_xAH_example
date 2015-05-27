@@ -21,8 +21,8 @@ public:
 public:
   // Tree *myTree; //!
   // TH1 *myHist; //!
-  bool m_debug = true; //!
-  std::string m_inContainerName; //!
+  bool m_debug;
+  std::string m_inContainerName;
   std::string m_name;
   std::string m_detailStr;
 
