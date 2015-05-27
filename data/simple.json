@@ -11,23 +11,48 @@
     }
   },
   {
-    "class": "JetSelector",
-    "configs": {
-      "m_debug": false,
-      "m_inContainerName": "AntiKt4LCTopoJets",
-      "m_pT_min": 30.0,
-      "m_outContainerName": "AntiKt4LCTopoJets_PassPreSel",
-      "m_pass_min": 4,
-      "m_useCutFlow": false
-    }
-  },
-  {
     "class": "JetPlotsAlgo",
     "configs": {
       "m_debug": false,
       "m_inContainerName": "AntiKt4LCTopoJets",
       "m_detailStr": "kinematic",
       "m_name": "NoPreSel"
+    }
+  },
+  {
+    "class": "JetSelector",
+    "configs": {
+      "m_debug": false,
+      "m_inContainerName": "AntiKt4LCTopoJets",
+      "m_pT_min": 30000.0,
+      "m_outContainerName": "AntiKt4LCTopoJets_PassPreSel",
+      "m_pass_min": 4,
+      "m_useCutFlow": false,
+      "m_inputAlgo": "",
+      "m_outputAlgo": "",
+      "m_createSelectedContainer": true,
+      "m_nToProcess": -1,
+      "m_cleanJets": true,
+      "m_cleanEvtLeadJets": 0,
+      "m_pass_max": -1,
+      "m_pT_max": 1e8,
+      "m_eta_max": 1e8,
+      "m_eta_min": 1e8,
+      "m_detEta_max": 1e8,
+      "m_detEta_min": 1e8,
+      "m_mass_max": 1e8,
+      "m_mass_min": 1e8,
+      "m_rapidity_max": 1e8,
+      "m_rapidity_min": 1e8,
+      "m_truthLabel": -1,
+      "m_doJVF": false,
+      "m_pt_max_JVF": 50e3,
+      "m_eta_max_JVF": 2.4,
+      "m_JVFCut": 0.5,
+      "m_btag_veryloose": false,
+      "m_btag_loose": false,
+      "m_btag_medium": false,
+      "m_btag_tight": false
     }
   },
   {

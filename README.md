@@ -19,6 +19,8 @@ rc compile
 
 ```xAH_run.py input.root --config=simple_xAH_example/data/simple.json```
 
+This will produce two sets of plots, one for the input `AntiKt4LCTopoJets` that you are applying JetSelector on, and one for the output `AntiKt4LCTopoJets` that have passed the pre-selection.
+
 For other options, run `xAH_run.py -h` but note that only direct driver has been tested right now.
 
 ## Dependencies
