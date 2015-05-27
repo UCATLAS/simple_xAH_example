@@ -1,8 +1,42 @@
 [
+  { "class": "BasicEventSelection",
+    "configs": {
+      "m_debug": false,
+      "m_truthLevelOnly": false,
+      "m_applyGRL": true,
+      "m_GRLxml": "$ROOTCOREBIN/data/xAODAnaHelpers/data12_8TeV.periodAllYear_DetStatus-v61-pro14-02_DQDefects-00-01-00_PHYS_StandardGRL_All_Good.xml",
+      "m_doPUreweighting": false,
+      "m_vertexContainerName": "PrimaryVertices",
+      "m_PVNTrack": 2
+    }
+  },
+  {
+    "class": "JetSelector",
+    "configs": {
+      "m_debug": false,
+      "m_inContainerName": "AntiKt4LCTopoJets",
+      "m_pT_min": 30.0,
+      "m_outContainerName": "AntiKt4LCTopoJets_PassPreSel",
+      "m_pass_min": 4,
+      "m_useCutFlow": false
+    }
+  },
   {
     "class": "JetPlotsAlgo",
     "configs": {
-      "m_debug": false
+      "m_debug": false,
+      "m_inContainerName": "AntiKt4LCTopoJets",
+      "m_detailStr": "kinematic",
+      "m_name": "NoPreSel"
+    }
+  },
+  {
+    "class": "JetPlotsAlgo",
+    "configs": {
+      "m_debug": false,
+      "m_inContainerName": "AntiKt4LCTopoJets_PassPreSel",
+      "m_detailStr": "kinematic",
+      "m_name": "PassPreSel"
     }
   }
 ]

@@ -47,6 +47,11 @@ EL::StatusCode JetPlotsAlgo :: histInitialize ()
   // beginning on each worker node, e.g. create histograms and output
   // trees.  This method gets called before any input files are
   // connected.
+
+  m_plots = new JetHists( m_name, m_detailStr );
+  RETURN_CHECK("JetPlotsAlgo::histInitialize()", m_plots->initialize(), "");
+  m_plots->record( wk() );
+
   return EL::StatusCode::SUCCESS;
 }
 
@@ -107,7 +112,7 @@ EL::StatusCode JetPlotsAlgo :: execute ()
   }
 
   const xAOD::JetContainer* inJets = 0;
-  RETURN_CHECK("JetPlotsAlgo::execute()", HelperFunctions::retrieve(inJets, "AntiKt10LCTopoJets", m_event, m_store, m_debug) ,"Failed to get AntiKt10LCTopoJets");
+  RETURN_CHECK("JetPlotsAlgo::execute()", HelperFunctions::retrieve(inJets, m_inContainerName, m_event, m_store, m_debug) ,"Failed to get AntiKt10LCTopoJets");
 
   RETURN_CHECK("JetPlotsAlgo::execute()", m_plots->execute( inJets, eventWeight ), "Could not plot!");
 
