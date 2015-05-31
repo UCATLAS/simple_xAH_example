@@ -10,7 +10,6 @@ mkdir myRootCore && cd myRootCore
 rcSetup Base,2.3.12
 git clone https://github.com/UCATLAS/simple_xAH_example
 git clone https://github.com/UCATLAS/xAODAnaHelpers
-cd xAODAnaHelpers && git checkout simple_xAH_example_branch && cd ../
 rc find_packages
 rc compile
 ```
