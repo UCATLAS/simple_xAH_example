@@ -1,15 +1,16 @@
 # A Simple xAH Example
 
 ## Installing
-The last stable analysis base used is **2.3.12**. To install,
+The last stable analysis base used is **2.3.14**. To install,
 ```bash
 export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
 alias setupATLAS='source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh'
 source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
 mkdir myRootCore && cd myRootCore
-rcSetup Base,2.3.12
+rcSetup Base,2.3.14
 git clone https://github.com/UCATLAS/simple_xAH_example
 git clone https://github.com/UCATLAS/xAODAnaHelpers
+python xAODAnaHelpers/scripts/checkoutASGtags.py 2.3.14
 rc find_packages
 rc compile
 ```
@@ -26,7 +27,7 @@ For other options, run `xAH_run.py -h` but note that only direct driver has been
  - dependencies are in [cmt/Makefile.RootCore](cmt/Makefile.RootCore)
 
 ### Tested Against AnalysisBase versions:
- - 2.3.12
+ - 2.3.14
 
 #### Authors
 - [Giordon Stark](https://github.com/kratsg)
